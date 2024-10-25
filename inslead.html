@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Leaderboard</title>
+    <link rel="stylesheet" href="inslead.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="leaderboard-page">
+        <header class="leaderboard-header">
+            <h1>Gamified Leaderboard</h1>
+            <div class="logo-container">
+                <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo" />
+            </div>
+        </header>
+        <div class="action-buttons">
+            <button onclick="filterLeaderboard(90)"><i class="fas fa-filter"></i> Show Scores ≥ 90</button>
+            <button onclick="resetFilters()"><i class="fas fa-redo"></i> Reset Filters</button>
+            <button onclick="exportLeaderboard()"><i class="fas fa-download"></i> Export Leaderboard</button>
+            <button onclick="customizeAppearance()"><i class="fas fa-paint-brush"></i> Customize Appearance</button>
+            <button onclick="shareWithStudents()"><i class="fas fa-share-alt"></i> Share with Students</button>
+            <button onclick="toggleNames()">
+                <i class="fas fa-eye" id="eye-icon"></i> <span id="eye-text">Hide Names</span>
+            </button>
+        </div>
+
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th id="name-header">Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <!-- Student data will be injected here -->
+            </tbody>
+        </table>
+        <div class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <script src="inslead.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inspre.css">
+    <title>Assessment Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="preview-container" id="preview-container">
+        <h2>Assessment Preview</h2>
+        <div class="logo-container">
+            <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo">
+        </div>
+        <div class="instructions" id="instructions">
+            <p>Please review the question and options carefully.</p>
+            <p>Time remaining: <span id="timer">5:00</span></p>
+        </div>
+        
+        <div class="question-preview" id="question-preview">
+            <!-- Question and options will be dynamically added here -->
+        </div>
+        
+        <div class="action-buttons">
+            <button id="submit-btn" class="submit-btn">Submit</button>
+            <button id="back-btn" class="back-btn">← Back</button>
+        </div>
+        
+        <div class="time-up-alert" id="time-up-alert" style="display: none;">Time is up! Please submit your answer.</div>
+    </div>
+
+    <script src="inspre.js"></script>
+</body>
+</html>

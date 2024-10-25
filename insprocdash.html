@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="insprocdash.css">
+    <title>Proctoring Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="proctoring-dashboard">
+        <div class="logo-container">
+            <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo">
+        </div>
+        <header class="dashboard-header">
+            <h1>Proctoring Dashboard</h1>        </header>
+
+        <div class="live-feed">
+            <h2>Live Feed</h2>
+            <div class="video-grid" id="video-grid">
+                <!-- Sample video feeds will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="alerts-panel">
+            <h2>Alerts & Notifications</h2>
+            <ul id="alerts-list">
+                <!-- Alerts will be dynamically added here -->
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <button onclick="handleAction('Pause')" class="action-btn">Pause</button>
+            <button onclick="handleAction('Flag')" class="action-btn">Flag</button>
+            <button onclick="handleAction('Terminate')" class="action-btn">Terminate</button>
+        </div>
+
+        <div class="navigation">
+            <button class="back-arrow" onclick="goBack()">← Back</button>
+        </div>
+    </div>
+
+    <script src="insprocdash.js"></script>
+</body>
+</html>

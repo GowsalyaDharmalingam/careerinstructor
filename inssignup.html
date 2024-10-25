@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .auth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .auth-box {
+      background-color: #fff;
+      padding: 60px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .logo-container img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 10px;
+      padding-right: 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .input-field .icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .btn-red {
+      background-color: red;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .btn-red:hover {
+      background-color: darkred;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-message {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .tick-mark {
+      font-size: 2rem;
+      color: green;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <div class="logo-container">
+        <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo" />
+      </div>
+      <h2>SIGN UP</h2>
+      <form id="signUpForm">
+        <div class="input-field">
+          <input type="text" id="instructorName" placeholder="Create Instructor Name" required />
+          <span class="icon">🎓</span>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" placeholder="Enter E-Mail ID" required />
+          <span class="icon">✉️</span>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" placeholder="Enter Password" required />
+          <span class="icon">👁️</span>
+        </div>
+        <button type="submit" class="btn-red"><a href="inslogin.html">SIGN UP</button>
+      </form>
+
+      <div id="popup" class="popup-overlay" style="display: none;">
+        <div class="popup-message">
+          <span class="tick-mark">✔️</span>
+          <p>Registered successfully!</p>
+        </div>
+      </div>
+
+      <p>
+        Already have an account? <a href="inslogin.html">SIGN IN</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signUpForm');
+    const popup = document.getElementById('popup');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Simulate successful registration logic here
+      popup.style.display = 'flex';
+
+      // Simulate some loading time for the registration process
+      setTimeout(() => {
+        popup.style.display = 'none';
+        // Redirect to sign-in page or handle further logic here
+        window.location.href = '/signin';
+      }, 3000); // Message will disappear after 3 seconds
+    });
+  </script>
+</body>
+</html>

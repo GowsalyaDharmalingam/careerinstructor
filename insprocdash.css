@@ -1,0 +1,86 @@
+.proctoring-dashboard {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.dashboard-header {
+    background-color: #520a89;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.live-feed, .alerts-panel {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.video-feed {
+    border: 1px solid #520a89;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.action-btn {
+    background-color: #520a89;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background-color: #3f0075;
+}
+
+.alerts-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alerts-panel li {
+    margin: 5px 0;
+    background-color: #fff3cd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navigation {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-arrow {
+    background-color: transparent;
+    border: none;
+    color: #520a89;
+    cursor: pointer;
+    font-size: 16px;
+}
+.logo {
+    float:right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="insreport.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Reports & Analytics Dashboard</title>
+</head>
+<body>
+    <div class="reports-container">
+        <header class="header">
+            <div class="logo">
+                <img src="careerfitlogo.jpeg" alt="Logo">
+            </div>
+            <h1 class="header-title">Reports & Analytics Dashboard</h1>
+        </header>
+
+        <section class="overview-section">
+            <div class="performance-summary">
+                <div class="summary-card">
+                    <h2>Total Assessments</h2>
+                    <p id="total-assessments">5</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Average Score</h2>
+                    <p id="average-score">86.6%</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Top Performer</h2>
+                    <p id="top-performer">Student 5</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="report-section">
+            <h2>Math Quiz - Student Performance</h2>
+            <div class="chart-container">
+                <canvas id="mathChart"></canvas>
+            </div>
+            <table class="performance-table" id="math-table">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="math-table-body"></tbody>
+            </table>
+        </section>
+
+        <section class="report-section">
+            <h2>Physics Test - Question Analysis</h2>
+            <div class="chart-container">
+                <canvas id="physicsChart"></canvas>
+            </div>
+            <table class="performance-table" id="physics-table">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="physics-table-body"></tbody>
+            </table>
+        </section>
+
+        <div class="export-section">
+            <button id="preview-button">Preview Report</button>
+            <button id="export-pdf-button">Export as PDF</button>
+            <button id="export-excel-button">Export as Excel</button>
+        </div>
+
+        <div class="back-button" onclick="goBack()">←</div>
+
+        <div class="overlay" id="overlay" style="display: none;"></div>
+        <div class="modal" id="modal" style="display: none;">
+            <div class="modal-header">
+                <h2>Report Preview</h2>
+                <button class="close-button" onclick="closePreview()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <h3>Math Quiz Report</h3>
+                <table class="performance-table" id="preview-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="preview-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="insreport.js"></script>
+</body>
+</html>

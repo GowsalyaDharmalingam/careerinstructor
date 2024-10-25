@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email and OTP Verification</title>
+    <link rel="stylesheet" href="insresend.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="verification-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <div class="otp-verification">
+            <h2>Verify OTP</h2>
+            <p>Enter the 6-digit OTP sent to your email.</p>
+            <form action="#" method="POST" class="otp-form">
+                <input type="text" maxlength="6" class="otp-input" required>
+                <button type="submit" id="verify-otp">Verify OTP</button>
+            </form>
+            <div class="email-verification">
+                <p>Enter your email address to receive an OTP.</p>
+                <form action="#" method="POST">
+                    <label for="Password">change Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="submit" id="send-otp">Save Password</button>
+                </form>
+            </div>
+            <p><a href="insresend.html">Resend OTP</a></p>
+            <p><a href="inslogin.html">Back</a></p>
+        </div>
+    </div>
+</body>
+</html>

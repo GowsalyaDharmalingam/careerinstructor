@@ -1,0 +1,70 @@
+.peer-assessment-page {
+    padding: 20px;
+}
+
+.peer-assessment-header {
+    background-color: #520a89;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.action-buttons button {
+    background-color: #520a89;
+    color: white;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #3d0866;
+}
+
+.groups-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.groups-list li {
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.groups-list li ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.groups-list button {
+    background-color: #520a89;
+    color: white;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.groups-list button:hover {
+    background-color: #3d0866;
+}
+
+.back-button {
+    margin-top: 20px;
+    cursor: pointer;
+}

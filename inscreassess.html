@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Assessment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .create-assessment-page .create-assessment-container {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .create-assessment-page .header {
+            background-color: #520a89;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .create-assessment-page .header-title {
+            margin: 0;
+        }
+        .create-assessment-page .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .create-assessment-page .error-message {
+            color: red;
+            margin-bottom: 15px;
+        }
+        .create-assessment-page form {
+            display: flex;
+            flex-direction: column;
+        }
+        .create-assessment-page form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .create-assessment-page form input,
+        .create-assessment-page form select,
+        .create-assessment-page form textarea {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .create-assessment-page form input:focus,
+        .create-assessment-page form select:focus,
+        .create-assessment-page form textarea:focus {
+            border-color: #520a89;
+            outline: none;
+        }
+        .create-assessment-page form button {
+            background-color: #520a89;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .create-assessment-page form button:hover {
+            background-color: #3f0869;
+        }
+        .create-assessment-page .questions-list {
+            margin-bottom: 15px;
+            border: 1px dashed #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            min-height: 40px;
+        }
+        .create-assessment-page .add-question-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .create-assessment-page .add-question-button:hover {
+            background-color: #45a049;
+        }
+        .create-assessment-page .draft-option {
+            margin: 15px 0;
+        }
+        .create-assessment-page .back-button {
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            background-color: #520a89;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+        .create-assessment-page .back-button:hover {
+            background-color: #ac65e3;
+        }
+        .create-assessment-page .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .create-assessment-page .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .create-assessment-page .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .create-assessment-page .suggestions-list {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: -5px;
+            max-height: 150px;
+            overflow-y: auto;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
+        .create-assessment-page .suggestions-list li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .create-assessment-page .suggestions-list li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="create-assessment-page">
+    <header class="header">
+        <div class="logo">
+            <img src="careerfitlogo.jpeg" alt="Logo" />
+        </div>
+        <h1 class="header-title">Create New Assessment</h1>
+    </header>
+    <div class="create-assessment-container">
+        <div class="error-message" id="error-message"></div>
+        <form id="assessment-form">
+            <label>Assessment Title:</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter assessment title"
+                required
+            />
+            <div class="tooltip">
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Provide a clear title for your assessment.</span>
+            </div>
+            <ul class="suggestions-list" id="suggestions-list"></ul>
+
+            <label>Subject:</label>
+            <input
+                type="text"
+                id="subject"
+                placeholder="Enter subject"
+                required
+            />
+
+            <label>Description:</label>
+            <textarea
+                id="description"
+                placeholder="Enter description"
+                required
+            ></textarea>
+
+            <label>Date:</label>
+            <input type="date" id="date" required />
+
+            <label>Time:</label>
+            <input type="time" id="time" required />
+
+            <label>Question Type:</label>
+            <select id="question-type" required>
+                <option value="MCQ">Multiple Choice</option>
+                <option value="Descriptive">Descriptive</option>
+                <option value="Coding">Coding</option>
+            </select>
+
+            <div class="questions-list" id="questions-list">
+                <h4>Questions:</h4>
+                <p>No questions added yet.</p>
+            </div>
+
+            <button type="button" class="add-question-button" id="add-question-button">
+                Add Question
+            </button>
+
+            <div class="draft-option">
+                <input type="checkbox" id="draft" />
+                <label for="draft">Save as Draft</label>
+            </div>
+
+            <button type="submit">Create Assessment</button>
+        </form>
+        <div class="back-button" id="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleInput = document.getElementById('title');
+    const subjectInput = document.getElementById('subject');
+    const dateInput = document.getElementById('date');
+    const timeInput = document.getElementById('time');
+    const descriptionInput = document.getElementById('description');
+    const questionTypeSelect = document.getElementById('question-type');
+    const questionsList = document.getElementById('questions-list');
+    const errorMessage = document.getElementById('error-message');
+    const suggestionsList = document.getElementById('suggestions-list');
+    const draftCheckbox = document.getElementById('draft');
+    const addQuestionButton = document.getElementById('add-question-button');
+    const assessmentForm = document.getElementById('assessment-form');
+
+    let questions = [];
+
+    const validateForm = () => {
+        if (!titleInput.value || !subjectInput.value || !dateInput.value || !timeInput.value || !descriptionInput.value || questions.length === 0) {
+            errorMessage.innerText = 'Please fill out all fields and add at least one question.';
+            return false;
+        }
+        errorMessage.innerText = '';
+        return true;
+    };
+
+    assessmentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!validateForm()) return;
+
+        const draft = draftCheckbox.checked;
+        console.log('Assessment created:', {
+            title: titleInput.value,
+            subject: subjectInput.value,
+            date: dateInput.value,
+            time: timeInput.value,
+            description: descriptionInput.value,
+            questionType: questionTypeSelect.value,
+            questions: questions,
+            draft: draft
+        });
+        alert(`Assessment ${draft ? 'saved as draft' : 'published'} successfully!`);
+        resetForm();
+    });
+
+    const resetForm = () => {
+        titleInput.value = '';
+        subjectInput.value = '';
+        dateInput.value = '';
+        timeInput.value = '';
+        descriptionInput.value = '';
+        questionTypeSelect.value = 'MCQ';
+        questions = [];
+        questionsList.innerHTML = '<h4>Questions:</h4><p>No questions added yet.</p>';
+        errorMessage.innerText = '';
+        draftCheckbox.checked = false;
+        suggestionsList.innerHTML = '';
+    };
+
+    addQuestionButton.addEventListener('click', () => {
+        const newQuestion = prompt('Enter your question:');
+        if (newQuestion) {
+            questions.push(newQuestion);
+            updateQuestionsList();
+        }
+    });
+
+    const updateQuestionsList = () => {
+        if (questions.length > 0) {
+            questionsList.innerHTML = '<h4>Questions:</h4><ul>' + questions.map(q => `<li>${q}</li>`).join('') + '</ul>';
+        } else {
+            questionsList.innerHTML = '<h4>Questions:</h4><p>No questions added yet.</p>';
+        }
+    };
+
+    titleInput.addEventListener('input', function () {
+        const value = this.value;
+        if (value) {
+            fetchSuggestions(value);
+        } else {
+            suggestionsList.innerHTML = '';
+        }
+    });
+
+    const fetchSuggestions = (input) => {
+        const mockApiResponse = [
+            `How to implement ${input} in real life?`,
+            `Why is ${input} important?`,
+            `Explain the principles of ${input}.`
+        ];
+        suggestionsList.innerHTML = mockApiResponse.map(suggestion => `<li>${suggestion}</li>`).join('');
+        suggestionsList.querySelectorAll('li').forEach(li => {
+            li.addEventListener('click', () => {
+                titleInput.value = li.innerText;
+                suggestionsList.innerHTML = '';
+            });
+        });
+    };
+
+    document.getElementById('back-button').addEventListener('click', () => {
+        window.history.back();
+    });
+</script>
+</body>
+</html>

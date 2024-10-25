@@ -1,0 +1,150 @@
+/* General Styles */
+.settings-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Dark Mode Styles */
+  .settings-page.dark-mode {
+    background-color: #1e1e1e;
+    color: #ddd;
+  }
+  
+  /* Header Styles */
+  .settings-page .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #520a89;
+    color: white;
+    padding: 15px;
+    position: relative;
+  }
+  
+  /* Logo Styles */
+  .settings-page .logo img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Dark Mode Toggle Button */
+  .settings-page .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .settings-page .dark-mode-toggle:hover {
+    background-color: lightgreen;
+  }
+  
+  .settings-page .dark-mode-toggle .icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  .settings-page .dark-mode-toggle .icon-light {
+    display: none;
+  }
+  
+  .settings-page.dark-mode .dark-mode-toggle .icon-dark {
+    display: none;
+  }
+  
+  .settings-page.dark-mode .dark-mode-toggle .icon-light {
+    display: inline;
+  }
+  
+  /* Main Content Area */
+  .settings-page .main-content {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  /* Section Styles */
+  .settings-page section {
+    margin-bottom: 40px;
+  }
+  
+  /* Section Header Styles */
+  .settings-page h2 {
+    border-bottom: 2px solid #520a89;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #520a89;
+  }
+  
+  /* Form Styles */
+  .settings-page form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .settings-page label {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .settings-page input,
+  .settings-page select {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .settings-page input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .settings-page button {
+    background-color: #520a89;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .settings-page button:hover {
+    background-color: #720fa8;
+  }
+  
+  /* Circular Back Button */
+  .back-button {
+    cursor: pointer;
+    color: white;
+    background-color: #520a89;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .back-button:hover {
+    background-color: #720fa8;
+  }
+  

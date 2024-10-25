@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator Dashboard</title>
+    <link rel="stylesheet" href="inshome.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="home-page">
+        <header class="header">
+            <h1>Educator Dashboard</h1>
+            <div class="logo-container">
+                <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="inssetting.html" onclick="navigateTo('settings')">Settings</a></li>
+                    <li><a href="insreport.html" onclick="navigateTo('reports')">Reports</a></li>
+                    <li><a href="inscreassess.html" onclick="navigateTo('create-assessment')">Create Assessment</a></li>
+                    <li><a href="insassess.html" onclick="navigateTo('assessments')">View Assessments</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="overview">
+                <h2>Welcome, Instructor!</h2>
+                <p>Manage your assessments, track performance, and personalize your teaching experience.</p>
+            </section>
+
+            <section class="actions">
+                <button class="action-button" onclick="navigateTo('create-assessment')"><p class="edu"><a href="inscreassess.html">New Assessment</a></p></button>
+                <button class="action-button" onclick="navigateTo('reports')"><p class="edu"><a href="insreport.html"> Results</a></p></button>
+                <button class="action-button" onclick="navigateTo('assessments')"><p class="edu"><a href="insassess.html"> Manage Users</a></p></button>
+            </section>
+
+            <section class="advanced-features">
+                <h3>Advanced Features</h3>
+                <div class="feature-grid">
+                    <button class="feature-button" onclick="navigateTo('ai-proctoring-setup')"><p class="edu"><a href="insAiProc.html" >Proctoring Setup</a></p></button>
+                    <button class="feature-button" onclick="navigateTo('feedback')"><p class="edu"><a href="insfeed.html">Feedback</a></p></button>
+                    <button class="feature-button" onclick="navigateTo('analytics')"><p class="edu"><a href="insstud.html"> Analytics</a></p></button>
+                    <button class="feature-button" onclick="navigateTo('peer-assessment')"><p class="edu"><a href="insassess.html"> Assessment</a></p></button>
+                    <button class="feature-button" onclick="navigateTo('leaderboard')"><p class="edu"><a href="inslead.html">Leaderboard</a></p></button>
+                </div>
+            </section>
+        </main>
+
+        <div class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <script src="inshome.js"></script>
+</body>
+</html>

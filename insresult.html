@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Results</title>
+    <link rel="stylesheet" href="insresult.css">
+</head>
+<body>
+<div class="background"></div>
+    <div class="result-management-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <h1>Assessment Results</h1>
+            <div class="header-actions">
+                <input type="text" id="search" placeholder="Search users..." onkeyup="filterResults()">
+            </div>
+        </header>
+
+        <!-- Results Table -->
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Username</th>
+                    <th onclick="sortTable(1)">Assessment</th>
+                    <th onclick="sortTable(2)">Score</th>
+                    <th onclick="sortTable(3)">Status</th>
+                    <th onclick="sortTable(4)">Time Taken</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="resultTableBody">
+                <tr>
+                    <td>user1</td>
+                    <td>Math Assessment</td>
+                    <td>85%</td>
+                    <td class="status-passed">Passed</td>
+                    <td>25 min</td>
+                    <td>
+                        <button class="action-btn view-btn" onclick="viewDetails(this)">View</button>
+                        <button class="action-btn delete-btn" onclick="deleteResult(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>user2</td>
+                    <td>Science Assessment</td>
+                    <td>60%</td>
+                    <td class="status-failed">Failed</td>
+                    <td>45 min</td>
+                    <td>
+                        <button class="action-btn view-btn" onclick="viewDetails(this)">View</button>
+                        <button class="action-btn delete-btn" onclick="deleteResult(this)">Delete</button>
+                    </td>
+                </tr>
+                <!-- More result rows here -->
+            </tbody>
+        </table>
+        <button><p><a href="insreport.html">Report</a></p></button>
+    </div>
+
+    <script src="insresult.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Question Upload</title>
+  <link rel="stylesheet" href="insbulk.css">
+</head>
+<body>
+  <div class="upload-container">
+    <h1>Bulk Question Upload</h1>
+    <form id="uploadForm">
+      <label for="fileUpload" class="file-label">Select a CSV file with questions:</label>
+      <input type="file" id="fileUpload" accept=".csv">
+      <button type="submit">Upload</button>
+    </form>
+    <div id="table-container">
+      <h2>Uploaded Questions</h2>
+      <table id="questionsTable">
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Option 1</th>
+            <th>Option 2</th>
+            <th>Option 3</th>
+            <th>Option 4</th>
+            <th>Correct Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Questions will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="insbulk.js"></script>
+</body>
+</html>

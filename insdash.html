@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="insdash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="navigation-menu">
+            <div class="logo-container">
+                <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo" />
+                <h1 class="header-title">👩‍🏫 Instructor</h1>
+            </div>
+            <h1 class="main-title">CAREER FIT</h1>
+            <p class="tagline">Empowering Education in Every Assessments!</p>
+            <ul>
+                <li><a href="inshome.html" onclick="loadSection('dashboard')">🏠 Home</a></li>
+                <li><a href="insassess.html" onclick="loadSection('assessments')">📋 Manage Assessments</a></li>
+                <li><a href="insman.html" onclick="loadSection('manual-upload')">⬆️ Manual Upload</a></li>
+                <li><a href="inscreassess.html" onclick="loadSection('create-assessment')">✍️ Create Assessment</a></li>
+                <li><a href="insAiProc.html" onclick="loadSection('ai-proctoring-setup')">🤖 AI Proctoring</a></li>
+                <li><a href="insprocdash.html" onclick="loadSection('proctoring-dashboard')">📊 Proctoring Dashboard</a></li>
+                <li><a href="insreport.html" onclick="loadSection('reports')">📑 Reports</a></li>
+                <li><a href="inssetting.html" onclick="loadSection('settings')">⚙️ Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <div class="loading">Loading...</div>
+        </main>
+    </div>
+
+    <script src="insdash.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="insman.css">
+    <title>Manual Question Upload</title>
+</head>
+<body>
+    <div class="manual-upload-container">
+        <header class="header">
+            <div class="logo">
+                <img src="careerfitlogo.jpeg" alt="Logo">
+            </div>
+            <div class="header-content">
+                <h1>Manual Question Upload Section</h1>
+            </div>
+        </header>
+
+        <h2>Upload New Question</h2>
+        <div class="form-section">
+            <label>Question:</label>
+            <textarea id="question" placeholder="Enter your question here" class="rich-text-editor"></textarea>
+        </div>
+
+        <div class="form-section">
+            <label>Options:</label>
+            <div id="options-container">
+                <input type="text" placeholder="Option 1" class="option-input">
+                <input type="text" placeholder="Option 2" class="option-input">
+                <input type="text" placeholder="Option 3" class="option-input">
+                <input type="text" placeholder="Option 4" class="option-input">
+            </div>
+            <button class="bulk-add-btn" onclick="bulkAddOptions()"><a href="insbulk.html">Bulk Upload</a></button>
+        </div>
+
+        <div class="form-section">
+            <label>Correct Answer:</label>
+            <input type="text" id="correct-answer" placeholder="Enter correct answer" class="correct-answer-input">
+        </div>
+
+        <div class="form-section">
+            <label>Difficulty Level:</label>
+            <select id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label>Tags:</label>
+            <input type="text" id="tags" placeholder="e.g. Mathematics, Physics" class="tag-input">
+        </div>
+
+        <div class="form-section">
+            <label>Category:</label>
+            <select id="category">
+                <option value="MCQ">Multiple Choice</option>
+                <option value="Coding">Coding</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label>Hint (Optional):</label>
+            <input type="text" id="hint" placeholder="Enter a hint for learners">
+        </div>
+
+        <div class="form-section">
+            <label>Explanation (Optional):</label>
+            <textarea id="explanation" placeholder="Enter detailed explanation for learners"></textarea>
+        </div>
+
+        <div class="preview-section">
+            <button onclick="saveQuestion()" class="save-btn">Save</button>
+            <button onclick="previewQuestion()" class="preview-btn">Preview</button>
+            <button  onclick="previewQuestion()" class="pre-btn"><a href="inspre.html">Assessment Preview</a></button>
+        </div>
+
+        <div class="real-time-preview">
+            <h3>Live Preview:</h3>
+            <div id="preview-output"></div>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+
+        <div class="back-button" onclick="goBack()">
+            <span class="back-icon">←</span>
+        </div>
+    </div>
+
+    <script src="insman.js"></script>
+</body>
+</html>

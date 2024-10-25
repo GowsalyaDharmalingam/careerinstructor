@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Users</title>
+    <link rel="stylesheet" href="importuser.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <header>
+            <h1>Import Users</h1>
+        </header>
+
+        <!-- User Entry Section -->
+        <section class="user-entry">
+            <h2>Manual User Entry</h2>
+            <div class="field">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter user's full name">
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter user's email">
+            </div>
+            <div class="field">
+                <label for="role">Role:</label>
+                <select id="role">
+                    <option value="student">Student</option>
+                    <option value="instructor">Instructor</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <button id="add-user-btn">Add User</button>
+        </section>
+
+        <!-- Bulk Upload Section -->
+        <section class="bulk-upload">
+            <h2>Bulk Upload</h2>
+            <div class="field">
+                <label for="file-upload">Upload CSV/Excel File:</label>
+                <input type="file" id="file-upload" accept=".csv, .xlsx">
+            </div>
+            <button id="upload-btn">Upload File</button>
+        </section>
+
+        <!-- Preview Section -->
+        <section class="preview">
+            <h2>Preview Users</h2>
+            <table id="user-preview">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically added rows for preview -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Actions Section -->
+        <div class="actions">
+            <button id="import-btn"><p class="import"><a href="usermgmt.html">Import Users</a></p></button>
+        </div>
+    </div>
+
+    <script src="importuser.js"></script>
+</body>
+</html>

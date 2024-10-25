@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .auth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .auth-box {
+      background-color: #fff;
+      padding: 60px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .logo-container img {
+        float:right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 10px;
+      padding-right: 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .input-field .icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .options {
+      margin-bottom: 15px;
+    }
+
+    .options label {
+      font-size: 14px;
+    }
+
+    .btn-green {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .btn-green:hover {
+      background-color: darkgreen;
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .forgot-password,
+    .signup-link {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <div class="logo-container">
+        <img src="careerfitlogo.jpeg" alt="Brand Logo" class="logo">
+      </div>
+      <h2>SIGN IN</h2>
+      <form id="signInForm">
+        <div class="input-field">
+          <input type="text" id="username" placeholder="Enter Username/E-Mail ID" />
+          <span class="icon">👤</span>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" placeholder="Enter Password" />
+          <span class="icon" id="togglePassword" role="button" aria-label="Toggle Password Visibility">👁️</span>
+        </div>
+        <div class="options">
+          <label>
+            <input type="checkbox" id="rememberMe" /> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn-green"><a href="inshome.html">SIGN IN</button>
+      </form>
+      <div class="links">
+        <div class="forgot-password">
+          <a href="insforget.html">Forgot Password?</a>
+        </div>
+        <div class="signup-link">
+          <p>Don't have an account? <a href="inssignup.html">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    document.getElementById('togglePassword').addEventListener('click', function () {
+      const passwordField = document.getElementById('password');
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
+      this.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+
+    // Form submission logic
+    document.getElementById('signInForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Basic validation
+      if (!username || !password) {
+        alert('Please enter both username and password');
+        return;
+      }
+
+      // Placeholder for real authentication logic
+      alert('Signing in...');
+
+      // Redirect to dashboard (placeholder)
+      window.location.href = '/dashboard';
+    });
+  </script>
+</body>
+</html>

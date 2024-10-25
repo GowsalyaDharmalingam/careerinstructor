@@ -1,0 +1,86 @@
+/* Main container */
+.upload-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .file-label {
+    font-size: 1.2rem;
+  }
+  
+  input[type="file"] {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #520a89;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #7a3ab3;
+  }
+  
+  /* Table container */
+  #table-container {
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #520a89;
+    color: white;
+  }
+  
+  td {
+    background-color: white;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .upload-container {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    table {
+      font-size: 0.9rem;
+    }
+  }
+  

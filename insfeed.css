@@ -1,0 +1,82 @@
+.feedback-page {
+    padding: 20px;
+}
+
+.feedback-header {
+    background-color: #520a89;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.action-buttons, .editor-buttons {
+    margin-bottom: 20px;
+}
+
+.action-buttons button, .editor-buttons button {
+    background-color: #520a89;
+    color: white;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover, .editor-buttons button:hover {
+    background-color: #3d0866;
+}
+
+.templates-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.templates-list li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.templates-list li button {
+    background-color: #520a89;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.templates-list li button:hover {
+    background-color: #3d0866;
+}
+
+.feedback-editor textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    cursor: pointer;
+    margin-top: 20px;
+}

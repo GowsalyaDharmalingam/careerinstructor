@@ -1,0 +1,186 @@
+/* Scope the styles to the assessments page to prevent affecting other sections */
+.assessments-page {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assessments-page .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #520a89;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .assessments-page .logo {
+    flex: 0 0 50px;
+  }
+  
+  .assessments-page .logo img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .assessments-page .back-button {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    background-color: #520a89; 
+    border: none;
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+  }
+  
+  .assessments-page .back-button:hover {
+    background-color: #ac65e3; 
+  }
+  
+  .assessments-page .header-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .assessments-page .header-content h1 {
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .assessments-page .search-bar {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .assessments-page .main-content {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .assessments-page .sidebar {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .assessments-page .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .assessments-page .sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .assessments-page .sidebar li:hover {
+    color: #520a89;
+  }
+  
+  .assessments-page .assessment-list {
+    flex: 4;
+    padding: 20px;
+  }
+  
+  .assessments-page .dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .assessments-page .stat-card {
+    background-color: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .assessments-page .stat-card h3 {
+    color: #520a89;
+    margin-bottom: 10px;
+  }
+  
+  .assessments-page .assessment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .assessments-page .assessment-table th, 
+  .assessments-page .assessment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .assessments-page .assessment-table th {
+    background-color: #520a89;
+    color: #fff;
+  }
+  
+  .assessments-page .assessment-table td button {
+    padding: 10px 20px;
+    background-color: #520a89;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .assessments-page .assessment-table td button:hover {
+    background-color: #ac65e3;
+  }
+  
+  .assessments-page .bulk-actions {
+    margin-top: 20px;
+  }
+  
+  .assessments-page .bulk-actions button {
+    padding: 10px 20px;
+    background-color: #520a89;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .assessments-page .leaderboard {
+    background-color: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .assessments-page .leaderboard h2 {
+    color: #520a89;
+  }
+  
+  .assessments-page .leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .assessments-page .leaderboard li {
+    padding: 5px 0;
+  }
+  
